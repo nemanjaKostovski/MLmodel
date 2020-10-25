@@ -6,12 +6,12 @@ import scikitplot as skplt
 import seaborn as sns
 
 df = pd.read_csv('Bazaproizvodnjaprofila1.csv')
-X = df[['Rm', 'Rp', 'A%', 'Wb', 'Hours in oven' ]].values
+X = df[['Rm', 'Rp', 'A%', 'Wb']].values
 y = df[['Alloy']].values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=2)
 
-model = LogisticRegression(max_iter=6500)
+model = LogisticRegression(max_iter=8500)
 model.fit(X_train, y_train.ravel())
 
 y_pred = model.predict(X_test)
