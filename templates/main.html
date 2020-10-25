@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <title>Alumil</title>
+</head>
+<body>
+    <form class="form" action="{{ url_for('main') }}" method="POST">
+        <label class="label"><input type="number" placeholder="Rm"></label>
+        <label class="label"><input type="number" placeholder="Rp"></label>
+        <label class="label"><input type="number" placeholder="A%"></label>
+        <label class="label"><input type="number" placeholder="Wb"></label>
+        <input class="label" type="submit" value="Search">
+    </form>
+    <div class="result" align="center">
+        {% if result %}
+            {% for variable, value in original_input.items() %}
+                <b>{{ variable }}</b> : {{ value }}
+            {% endfor %}
+            <br>
+            <br> Predicted alloy:
+               <p style="font-size:50px">{{ result }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

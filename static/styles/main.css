@@ -1,0 +1,17 @@
+.form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    width: 80px;
+}
