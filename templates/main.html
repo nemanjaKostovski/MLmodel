@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='A.png')}}"/>
     <title>Alumil</title>
 </head>
 <body>
+    <img src="{{url_for('static', filename='Capture.png')}}" align="middle" />
+    <h1>Engine for discovering the best alloy for production</h1>
+    <p><i>Empovered by Logistic regression</i></p>
+    <p>This model will determine what alloy you should use to achieve required mechanical properties</p>
     <form class="form" action="{{ url_for('main') }}" method="POST">
-        <label class="label"><input type="number" placeholder="Rm"></label>
-        <label class="label"><input type="number" placeholder="Rp"></label>
-        <label class="label"><input type="number" placeholder="A%"></label>
-        <label class="label"><input type="number" placeholder="Wb"></label>
-        <input class="label" type="submit" value="Search">
+        <label class="label"><input class="input" type="float" name="Rm" placeholder="Rm" required></label>
+        <label class="label"><input class="input" type="float" name="Rp" placeholder="Rp" required></label>
+        <label class="label"><input class="input" type="float" name="A%" placeholder="A%" required></label>
+        <label class="label"><input class="input" type="float" name="Wb" placeholder="Wb" required></label>
+        <input class="button" type="submit" value="Search">
     </form>
-    <div class="result" align="center">
+    <div class="result">
         {% if result %}
             {% for variable, value in original_input.items() %}
                 <b>{{ variable }}</b> : {{ value }}
             {% endfor %}
             <br>
-            <br> Predicted alloy:
-               <p style="font-size:50px">{{ result }}</p>
+            <br> <h3>Suggested alloy:</h3>
+               <p class="big">{{ result }}</p>
         {% endif %}
     </div>
 
