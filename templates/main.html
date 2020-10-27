@@ -10,7 +10,7 @@
 <body>
     <img src="{{url_for('static', filename='Capture.PNG')}}" align="middle" />
     <h1>Engine for discovering the best alloy for production</h1>
-    <p><i>Empovered by Logistic regression</i></p>
+    <p><i>Empovered by Naive Bayes</i></p>
     <p>This model will determine what alloy you should use to achieve required mechanical properties</p>
     <form class="form" action="{{ url_for('main') }}" method="POST">
         <label class="label"><input class="input" type="float" name="Rm" placeholder="Rm" required></label>

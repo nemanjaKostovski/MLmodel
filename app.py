@@ -2,7 +2,7 @@ import flask
 import pickle
 import pandas as pd
 
-with open(f'model/alloys_model.pkl', 'rb') as f:
+with open(f'model/alloys_nb_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 app = flask.Flask(__name__, template_folder = 'templates')
