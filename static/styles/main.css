@@ -40,12 +40,6 @@ body {
   width: 450px;
   border: 5px solid gray;
   background-color: #ffd300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-flow: column wrap;
 }
 
 .big {
