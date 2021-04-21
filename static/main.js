@@ -6,6 +6,6 @@ const result = document.querySelector('.result');
 form.addEventListener('onsubmit', showResult());
 
 function showResult(){
-    result.style.display = block;
+    result.style.display = 'block';
 }
 
