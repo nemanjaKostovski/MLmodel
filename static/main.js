@@ -3,7 +3,8 @@
 const form = document.querySelector('.form');
 const result = document.querySelector('.result');
 
-function showResult(){
+function showResult(evt){
+    evt.preventDefault();
     result.style.display = 'block';
 }
 
