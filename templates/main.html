@@ -30,16 +30,6 @@
                <p class="big">{{ result }}</p>
         {% endif %}
     </div>
-<script> 
-const form = document.querySelector('.form');
-const result = document.querySelector('.result');
-
-function showResult(event){
-    event.preventDefault();
-    result.style.visibility = 'visible';
-}
-
-form.addEventListener('submit', showResult);
-</script>
+<script src="{{url_for('static',filename='main.js')}}"></script>
 </body>
 </html>

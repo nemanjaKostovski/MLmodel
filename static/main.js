@@ -8,5 +8,3 @@ function showResult(){
 }
 
 form.addEventListener('submit', showResult);
-
- src="{{url_for('static',filename='main.js')}}"
