@@ -34,7 +34,8 @@
 const form = document.querySelector('.form');
 const result = document.querySelector('.result');
 
-function showResult(){
+function showResult(event){
+    event.preventDefault();
     result.style.visibility = 'visible';
 }
 
