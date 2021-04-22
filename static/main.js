@@ -3,8 +3,7 @@
 const form = document.querySelector('.form');
 const result = document.querySelector('.result');
 
-function showResult(evt){
-    evt.preventDefault();
+function showResult(){
     result.style.visibility = 'visible';
 }
 
