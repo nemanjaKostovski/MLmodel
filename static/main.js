@@ -5,7 +5,7 @@ const result = document.querySelector('.result');
 
 function showResult(evt){
     evt.preventDefault();
-    result.style.display = 'block';
+    result.style.visibility = 'visible';
 }
 
 form.addEventListener('submit', showResult);
