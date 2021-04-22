@@ -1,9 +1,9 @@
 // Adding functionality to form submit
 
-const form = document.querySelector('.form');
+const button = document.querySelector('.button');
 const result = document.querySelector('.result');
 
-form.addEventListener('onsubmit', showResult);
+button.addEventListener('onsubmit', showResult);
 
 function showResult(){
     result.style.display = 'block';
