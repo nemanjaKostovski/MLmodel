@@ -20,12 +20,9 @@ def main():
                                        columns = ['Rm', 'Rp', 'A%', 'Wb'],
                                        dtype = float)
         prediction = model.predict(input_variables)[0]
-        return flask.render_template('main.html', 'main.js', 
-                                     original_input = {'Rm':max_strength,
-                                                     'Rp':yield_strength,
-                                                     'A%':elongation,
-                                                     'Wb':webster},
-                                     result = prediction
-                                     )
+        params = {}
+        params["origina_input"] = {'Rm':max_strength, 'Rp':yield_strength, 'A%':elongation, 'Wb':webster}
+        params["result"] = result
+        return flask.render_template('main.html', **params)
 if __name__ == '__main__':
     app.run()
