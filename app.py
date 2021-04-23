@@ -21,7 +21,7 @@ def main():
                                        dtype = float)
         prediction = model.predict(input_variables)[0]
         params = {}
-        params["origina_input"] = {'Rm':max_strength, 'Rp':yield_strength, 'A%':elongation, 'Wb':webster}
+        params["original_input"] = {'Rm':max_strength, 'Rp':yield_strength, 'A%':elongation, 'Wb':webster}
         params["result"] = result
         return flask.render_template('main.html', **params)
 if __name__ == '__main__':
