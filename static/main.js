@@ -3,8 +3,9 @@
 const form = document.querySelector('.form');
 const result = document.querySelector('.result');
 
-function showResult(){
+function showResult(e){
     result.style.visibility = 'visible';
+    e.preventDefault();
 }
 
 form.addEventListener('submit', showResult);
