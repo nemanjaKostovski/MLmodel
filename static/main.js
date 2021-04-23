@@ -4,7 +4,7 @@ const form = document.querySelector('.form');
 const result = document.querySelector('.result');
 
 function showResult(e){
-    result.style.visibility = 'visible';
+    result.style.display = 'block';
     e.preventDefault();
 }
 
