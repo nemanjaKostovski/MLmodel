@@ -27,5 +27,9 @@ def main():
                                                      'Wb':webster},
                                      result = prediction
                                      )
+params = {}
+params["original_input"]= {'Rm':max_strength, 'Rp':yield_strength, 'A%':elongation,'Wb':webster}
+params["result"] = result                                                                         
+return flask.render_template("main.html", **params)
 if __name__ == '__main__':
     app.run()
