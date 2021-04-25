@@ -20,16 +20,16 @@
         <label class="label"><input class="input" type="number" step="0.01" name="Wb" placeholder="Wb" required></label>
         <button class="button" type="submit">Search</button>
     </form>
-    <div class="result">
         {% if result %}
+        <div class="result"></div>
             {% for variable, value in original_input.items() %}
                 <b>{{ variable }}</b> : {{ value }}
             {% endfor %}
             <br>
             <br> <h3>Suggested alloy:</h3>
                <p class="big">{{ result }}</p>
+        </div>
         {% endif %}
-    </div>
 <script src="{{url_for('static',filename='main.js')}}"></script>
 </body>
 </html>
